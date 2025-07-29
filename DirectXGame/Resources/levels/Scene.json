@@ -16,36 +16,25 @@
                     0.0
                 ],
                 "scaling": [
-                    1.0,
-                    1.0,
+                    3.2953639030456543,
+                    3.1216652393341064,
                     1.0
                 ]
             },
             "file_name": "Player",
-            "children": [
-                {
-                    "type": "MESH",
-                    "name": "Icosphere",
-                    "transform": {
-                        "translation": [
-                            0.450316846370697,
-                            2.4790148735046387,
-                            1.184091567993164
-                        ],
-                        "rotation": [
-                            0.0,
-                            -0.0,
-                            0.0
-                        ],
-                        "scaling": [
-                            1.0,
-                            1.0,
-                            1.0
-                        ]
-                    },
-                    "file_name": "Enemy"
-                }
-            ]
+            "collider": {
+                "type": "BOX",
+                "center": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "size": [
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            }
         },
         {
             "type": "LIGHT",
@@ -88,6 +77,72 @@
                     1.0
                 ]
             }
+        },
+        {
+            "type": "MESH",
+            "name": "Icosphere",
+            "transform": {
+                "translation": [
+                    -4.225301265716553,
+                    -6.899446964263916,
+                    2.1636571884155273
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "file_name": "Enemy"
+        },
+        {
+            "type": "MESH",
+            "name": "Icosphere.001",
+            "transform": {
+                "translation": [
+                    3.7237043380737305,
+                    7.745841979980469,
+                    -0.5556024312973022
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "file_name": "Enemy"
+        },
+        {
+            "type": "MESH",
+            "name": "Icosphere.002",
+            "transform": {
+                "translation": [
+                    2.6446261405944824,
+                    0.527917206287384,
+                    -4.429492473602295
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "file_name": "Enemy"
         }
     ]
 }
