@@ -137,8 +137,19 @@ void GameScene::Initialize() {
 
 void GameScene::Update() {
 
-	for (WorldTransform* object : worldTransforms) {
-		object->matWorld_ = MathUtility::MakeTranslateMatrix(object->translation_);
+    for (WorldTransform* object : worldTransforms) {
+		using namespace KamataEngine::MathUtility;
+
+		Matrix4x4 scale = MakeScaleMatrix(object->scale_);
+
+		Matrix4x4 rotateX = MakeRotateXMatrix(object->rotation_.x);
+		Matrix4x4 rotateY = MakeRotateYMatrix(object->rotation_.y);
+		Matrix4x4 rotateZ = MakeRotateZMatrix(object->rotation_.z);
+		Matrix4x4 rotate = rotateZ * rotateY * rotateX; // 順番は調整可能
+
+		Matrix4x4 translate = MakeTranslateMatrix(object->translation_);
+
+		object->matWorld_ = scale * rotate * translate;
 		object->TransferMatrix();
 	}
 }
